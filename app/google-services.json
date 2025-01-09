@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "301946334657",
+    "firebase_url": "https://work-tracker-gpn3g5-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "work-tracker-gpn3g5",
+    "storage_bucket": "work-tracker-gpn3g5.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:301946334657:android:e6c6ffcbbdb7675e80d340",
+        "android_client_info": {
+          "package_name": "com.example.kjcan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC-27U-vaYaQdsUztuiMc7bYfTgdUYoQPA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

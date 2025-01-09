@@ -1,0 +1,232 @@
+<resources>
+
+    <!-- Application and Navigation Strings -->
+    <string name="app_name">KJ Can</string>
+    <string name="welcome_to_kj_can_app">Welcome to KJ Can App</string>
+    <string name="leader_home_page">Leader Home Page</string>
+    <string name="feeder_home_page">Feeder Home Page</string>
+    <string name="logout">Logout</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Authentication Strings -->
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="login">Login</string>
+    <string name="show_password">Show Password</string>
+    <string name="failed_to_update_password">Failed to update password!</string>
+    <string name="password_updated">Password updated for ${user.username}!</string>
+    <string name="passwords_do_not_match">Passwords do not match!</string>
+    <string name="all_fields_required">All fields are required!</string>
+    <string name="new_password">New Password</string>
+
+    <!-- User Management Strings -->
+    <string name="create_user">Create User</string>
+    <string name="delete_user">Delete User</string>
+    <string name="role_e_g_leader_or_feeder">Role (e.g., leader or feeder)</string>
+    <string name="failed_to_delete_user">Failed to delete user!</string>
+    <string name="user_deleted">${user.username} deleted!</string>
+    <string name="confirm_delete_user">Are you sure you want to delete ${user.username}?</string>
+    <string name="role">Role</string>
+    <string name="view_users">View Users</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone Number (+60xxxxxxxxx)</string>
+    <string name="enter_otp">Enter OTP</string>
+
+    <!-- Duty Roster Strings -->
+    <string name="duty_roster">Duty Roster</string>
+    <string name="leader_shift_not_set">Leader shift not set. Please configure your shift.</string>
+    <string name="error_fetching_users">Error fetching users: %1$s</string>
+
+    <!-- Shift and Team Selection -->
+    <string name="select_team">Select Team</string>
+    <string name="shifts">Shifts</string>
+    <string name="assign_next_shift">Assign Next Shift</string>
+
+    <!-- Production Strings -->
+    <string name="production">Production</string>
+    <string name="system_down">System Down</string>
+    <string name="submit_production_form">Submit Production Form</string>
+    <string name="item_production">Item Production</string>
+    <string name="quantity">Quantity</string>
+    <string name="size_thickness_x_height_x_width">Size (Thickness x Height x Width)</string>
+    <string name="motor_speed_rpm">Motor Speed (RPM)</string>
+    <string name="job_id">Job ID</string>
+    <string name="scan">Scan</string>
+    <string name="remarks">Remarks</string>
+    <string name="scan_barcode">Scan Barcode</string>
+    <string name="with_barcode">With Barcode</string>
+    <string name="submit">Submit</string>
+    <string name="actual_produced">Actual Produced</string>
+    <string name="width_mm">Width (mm)</string>
+    <string name="height_mm">Height (mm)</string>
+    <string name="thickness_mm">Thickness (mm)</string>
+    <string name="field_name">Field Name</string>
+    <string name="edit_value">Edit Value</string>
+
+    <!-- Downtime Strings -->
+    <string name="downtime_type">Downtime Type</string>
+    <string name="planned_downtime">Planned Downtime</string>
+    <string name="unplanned_downtime">Unplanned Downtime</string>
+    <string name="special_downtime">Special Downtime</string>
+    <string name="type_reason">Type reason</string>
+    <string name="down_time">Down Time</string>
+    <string name="pause_for_downtime">Pause for Downtime</string>
+    <string name="submit_downtime">Submit Downtime</string>
+    <string name="enter_reason">Enter reason</string>
+    <string name="select_downtime_type">Select Downtime Type</string>
+    <string name="select_start_time">Select Start Time</string>
+    <string name="start_time_n_a">Start Time: N/A</string>
+    <string name="select_end_time">Select End Time</string>
+    <string name="end_time_n_a">End Time: N/A</string>
+
+    <!-- Time Strings -->
+    <string name="start_time">Start Time</string>
+    <string name="end_time">End Time</string>
+    <string name="duration">Duration</string>
+    <string name="start_time_text">Start Time: %1$s</string>
+    <string name="end_time_text">End Time: %1$s</string>
+    <string name="duration_text">Duration: %1$s min</string>
+
+    <!-- Miscellaneous Strings -->
+    <string name="create">Create</string>
+    <string name="cancel">Cancel</string>
+    <string name="reason_text">Reason: %1$s</string>
+    <string name="remarks_text">Remarks: %1$s</string>
+    <string name="view_records">View Records</string>
+    <string name="event_type">Event Type</string>
+    <string name="category">Category</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="change_password">Change Password</string>
+    <string name="change_over_checklist">Change Over Checklist</string>
+    <string name="product_detail">Product Detail</string>
+    <string name="draft_printing_process">Draft Printing Process</string>
+    <string name="printing_process">Printing Process</string>
+    <string name="company_name">Kian Joo Can (Johore)</string>
+    <string name="no_user_found">No user found</string>
+    <string name="change">Change</string>
+    <string name="user_list">User List</string>
+    <string name="records">Records</string>
+    <string name="settings">Settings</string>
+    <string name="share">Share</string>
+    <string name="user_management">User Management</string>
+    <string name="team_management">Team Management</string>
+    <string name="shift_management">Shift Management</string>
+    <string name="team">Team</string>
+    <string name="save">Save</string>
+    <string name="current_duty_roster">Current Duty Roster</string>
+    <string name="enter_username">Enter username</string>
+    <string name="enter_password">Enter password</string>
+    <string name="morning_shift">Morning Shift</string>
+    <string name="reset">Reset</string>
+    <string name="shift_time_settings">Shift Time Settings</string>
+    <string name="select_shift">Select Shift</string>
+    <string name="shift_start">Shift Start</string>
+    <string name="shift_end">Shift End</string>
+    <string name="submit_change_over_checklist">Submit Change Over Checklist</string>
+    <string name="product_status">Product status</string>
+    <string name="passes">Passes</string>
+    <string name="proof_process">Proof Process</string>
+    <string name="product_details">Product Details</string>
+    <string name="passes_time">Passes Time</string>
+    <string name="outgoing_material">Outgoing Material</string>
+    <string name="changeover_result">Changeover Result</string>
+
+    <!-- String Arrays -->
+    <string-array name="team_arrays">
+        <item>UV Line 1</item>
+        <item>UV Line 2</item>
+    </string-array>
+
+    <string-array name="shift_array">
+        <item>Morning</item>
+        <item>Night</item>
+        <item>Normal</item>
+    </string-array>
+
+    <string-array name="roles_array">
+        <item>Leader</item>
+        <item>Printer</item>
+        <item>Feeder</item>
+        <item>Packer</item>
+    </string-array>
+
+    <string-array name="shiftalt_array">
+        <item>UV Line 1</item>
+        <item>UV Line 2</item>
+    </string-array>
+
+    <string-array name="planned_downtime_array">
+        <item>MB: Meeting/Briefing</item>
+        <item>MS: Morning Setup</item>
+        <item>CO: Complete Change Over</item>
+        <item>CC: Change Colour</item>
+        <item>CP: Change Printing Plate</item>
+        <item>TB: Tea Break</item>
+        <item>CIC: Clean Impression Cylinder</item>
+        <item>LSD: Make LSD Sample</item>
+        <item>WU: Wash Up</item>
+    </string-array>
+
+    <string-array name="unplanned_downtime_array">
+        <item>MB: Machine Breakdown</item>
+        <item>EB: Electrical Issue</item>
+        <item>TS: Quality Issue</item>
+        <item>PP: Printing Plate Issue</item>
+        <item>OC: Others</item>
+    </string-array>
+
+    <string-array name="product_status">
+        <item>N: New</item>
+        <item>F: Amendment</item>
+        <item>R: Repeat</item>
+    </string-array>
+
+    <string-array name="product_detail">
+        <item>Product Code</item>
+        <item>Can Size</item>
+        <item>Tinplate Size</item>
+        <item>Ons quantity of product</item>
+        <item>Internal Lacquer</item>
+    </string-array>
+
+    <string-array name="passes">
+        <item>1st pass</item>
+        <item>2nd pass</item>
+        <item>3rd pass</item>
+        <item>4th pass</item>
+        <item>5th pass</item>
+    </string-array>
+
+    <string-array name="proof_process">
+        <item>Draft Printing Process</item>
+        <item>Printing Process</item>
+        <item>Lacquering Process</item>
+        <item>Customer Proof</item>
+        <item>Customer Sample Can</item>
+        <item>Digital Proof</item>
+        <item>Progressive Proof</item>
+    </string-array>
+    
+    <string-array name="outgoing_material">
+        <item>Ink</item>
+        <item>Lacquer</item>
+        <item>Varnish</item>
+        <item>Printing Plate</item>
+        <item>Printing Process</item>
+        <item>Draft Printing Process</item>
+        <item>Lacquering Process</item>
+        <item>LSD Tinplate</item>
+        <item>Digital Proof</item>
+        <item>Progressive Proof</item>
+        <item>Customer Proof</item>
+        <item>Miss Printed Sheet</item>
+    </string-array>
+
+    <string-array name="changeover_result">
+        <item>Success</item>
+        <item>Fail</item>
+    </string-array>
+</resources>

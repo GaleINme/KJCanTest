@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <!-- Container for User Info and Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- User Information Section -->
+        <LinearLayout
+            android:id="@+id/userInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <TextView
+                android:id="@+id/usernameItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="@string/username"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="start"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/roleItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/role"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="start"
+                android:padding="4dp" />
+
+            <TextView
+                android:id="@+id/shiftItem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/shifts"
+                android:textSize="14sp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:gravity="start"
+                android:padding="4dp" />
+        </LinearLayout>
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:id="@+id/actionButtonsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/editButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="100dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/edit"
+                android:textColor="@color/white"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/bold_green"
+                android:elevation="4dp"
+                app:iconGravity="start"
+                app:iconPadding="8dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:minWidth="100dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/delete"
+                android:textColor="@color/white"
+                app:cornerRadius="16dp"
+                app:backgroundTint="@color/red"
+                android:elevation="4dp"
+                app:iconGravity="start"
+                app:iconPadding="8dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

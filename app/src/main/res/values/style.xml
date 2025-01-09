@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="StyledButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:backgroundTint">@color/primaryColor</item> <!-- Blue background -->
+        <item name="android:textColor">@color/white</item> <!-- White text -->
+        <item name="cornerRadius">8dp</item> <!-- Rounded corners -->
+        <item name="android:elevation">4dp</item> <!-- Shadow -->
+    </style>
+
+    <!-- Logout Button Style -->
+    <style name="StyledLogoutButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:backgroundTint">@color/accentColor</item> <!-- Red background -->
+        <item name="android:textColor">@color/white</item> <!-- White text -->
+        <item name="cornerRadius">8dp</item> <!-- Rounded corners -->
+        <item name="android:elevation">4dp</item> <!-- Shadow -->
+    </style>
+
+
+    <style name="StyledButtonAccent" parent="Widget.MaterialComponents.Button">
+        <item name="android:backgroundTint">@color/accentColor</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:elevation">4dp</item>
+    </style>
+
+</resources>

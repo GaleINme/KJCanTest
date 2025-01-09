@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Main Content -->
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondaryBackground">
+        <!-- Toolbar -->
+
+        <include
+            android:id="@+id/toolbar_layout"
+            layout="@layout/activity_base" />
+
+        <!-- Main Content Layout -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:paddingTop="?attr/actionBarSize"
+            android:paddingHorizontal="16dp">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="4dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="4dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/scrollView"
+                app:cardBackgroundColor="@color/primaryColor">
+
+                <TextView
+                    android:id="@+id/dutyRosterText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:gravity="center"
+                    android:text="@string/production"
+                    android:textSize="18sp"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+            </androidx.cardview.widget.CardView>
+
+            <ScrollView
+                android:id ="@id/scrollView"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:padding="6dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/secondaryBackground"
+                app:layout_constraintTop_toBottomOf="@id/cardView">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <!-- Barcode Section -->
+                    <LinearLayout
+                        android:id="@+id/barcodeSection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <androidx.camera.view.PreviewView
+                            android:id="@+id/cameraPreview"
+                            android:layout_width="match_parent"
+                            android:layout_height="300dp"
+                            android:background="@color/black"
+                            android:layout_marginBottom="16dp" />
+                    </LinearLayout>
+
+                    <!-- Non-Barcode Section -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/nonBarcodeCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="4dp"
+                        android:padding="16dp"
+                        android:layout_marginBottom="16dp">
+
+                        <LinearLayout
+                            android:id="@+id/nonBarcodeSection"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <!-- Time Selection Section -->
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/selectStartTimeButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_start_time"
+                                style="@style/StyledButton"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"/>
+
+                            <TextView
+                                android:id="@+id/startTimeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/start_time_n_a"
+                                android:textColor="@color/secondaryTextColor"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"/>
+
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/selectEndTimeButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/select_end_time"
+                                style="@style/StyledButton"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp"/>
+
+                            <TextView
+                                android:id="@+id/endTimeTextView"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="@string/end_time_n_a"
+                                android:textColor="@color/secondaryTextColor"
+                                android:layout_marginBottom="16dp"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginEnd="20dp" />
+
+                            <!-- Job ID Section -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="16dp">
+
+                                <EditText
+                                    android:id="@+id/jobIdField"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/job_id"
+                                    android:inputType="text"
+                                    android:padding="12dp"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textColorHint="@color/secondaryTextColor"
+                                    android:layout_marginStart="20dp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/jobIdScanButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/scan"
+                                    style="@style/StyledButton"
+                                    android:layout_marginEnd="20dp" />
+                            </LinearLayout>
+
+                            <!-- Quantity Section -->
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginBottom="16dp">
+
+                                <EditText
+                                    android:id="@+id/quantityAcquiredField"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:hint="@string/quantity"
+                                    android:inputType="number"
+                                    android:padding="12dp"
+                                    android:backgroundTint="@color/primaryColor"
+                                    android:textColor="@color/primaryTextColor"
+                                    android:textColorHint="@color/secondaryTextColor"
+                                    android:layout_marginStart="20dp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/quantityScanButton"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/scan"
+                                    style="@style/StyledButton"
+                                    android:layout_marginEnd="20dp" />
+                            </LinearLayout>
+
+                            <!-- Thickness Field -->
+                            <EditText
+                                android:id="@+id/thicknessField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/thickness_mm"
+                                android:inputType="numberDecimal"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Height Field -->
+                            <EditText
+                                android:id="@+id/heightField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/height_mm"
+                                android:inputType="numberDecimal"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Width Field -->
+                            <EditText
+                                android:id="@+id/widthField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/width_mm"
+                                android:inputType="numberDecimal"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Actual Produced Field -->
+                            <EditText
+                                android:id="@+id/actualProducedField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/actual_produced"
+                                android:inputType="numberDecimal"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Motor Speed Field -->
+                            <EditText
+                                android:id="@+id/motorSpeedField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/motor_speed_rpm"
+                                android:inputType="numberDecimal"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Additional Fields... -->
+                            <EditText
+                                android:id="@+id/remarksField"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/remarks"
+                                android:inputType="text"
+                                android:layout_marginBottom="16dp"
+                                android:padding="12dp"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:backgroundTint="@color/primaryColor"
+                                android:textColor="@color/primaryTextColor"
+                                android:textColorHint="@color/secondaryTextColor" />
+
+                            <!-- Submit Button -->
+                            <com.google.android.material.button.MaterialButton
+                                android:id="@+id/submitProductionButton"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="16dp"
+                                android:layout_marginEnd="16dp"
+                                android:layout_marginBottom="16dp"
+                                android:text="@string/submit_production_form"
+                                style="@style/StyledButtonAccent" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </ScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <!-- Navigation Drawer -->
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

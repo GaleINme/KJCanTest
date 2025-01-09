@@ -1,0 +1,214 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:elevation="4dp"
+    android:padding="2dp"
+    android:layout_margin="8dp"
+    android:divider="?android:dividerHorizontal"
+    android:showDividers="middle"
+    android:descendantFocusability="blocksDescendants">
+
+    <!-- Main Panel -->
+    <LinearLayout
+        android:id="@+id/mainPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="8dp"
+        android:background="#37474F"
+        android:elevation="2dp">
+
+        <TextView
+            android:id="@+id/startTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/start_time"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/endTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/end_time"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/eventType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/event_type"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <!-- Expandable Panel -->
+    <LinearLayout
+        android:id="@+id/expandablePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="8dp"
+        android:background="#6A8CAF"
+        android:elevation="1dp">
+
+        <!-- Production Details -->
+        <TextView
+            android:id="@+id/pEventDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textColor="@android:color/white"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/jobId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/job_id"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/quantity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quantity"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/thickness"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/thickness_mm"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/height_mm"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/width_mm"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/actualProduced"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/actual_produced"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/motorSpeed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/motor_speed_rpm"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Premarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <!-- Downtime Details -->
+        <TextView
+            android:id="@+id/dEventDuration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/duration"
+            android:textColor="@android:color/white"
+            android:padding="4dp" />
+
+        <TextView
+            android:id="@+id/downtimeType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/downtime_type"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/category"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/Dremarks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks"
+            android:textColor="@android:color/white"
+            android:padding="4dp"
+            android:visibility="gone" />
+
+        <!-- Buttons -->
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end"
+            android:paddingTop="8dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/edit"
+                android:backgroundTint="#6FCF97"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/delete"
+                android:backgroundTint="#EB5757"
+                android:textColor="#FFFFFF"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

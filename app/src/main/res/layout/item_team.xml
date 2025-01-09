@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_marginTop="5dp"
+    android:background="@drawable/team_block_background">
+
+    <!-- Team Name -->
+    <TextView
+        android:id="@+id/teamNameTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Team Name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryColor"
+        android:paddingBottom="8dp" />
+
+    <!-- Members Header -->
+    <TextView
+        android:id="@+id/membersHeaderTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Members:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/secondaryColor"
+        android:paddingBottom="4dp" />
+
+    <!-- Members Container -->
+    <LinearLayout
+        android:id="@+id/membersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="14dp" />
+
+    <!-- Shift Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/shiftLabelTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shift:"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/secondaryColor"
+            android:paddingEnd="8dp" />
+
+        <Spinner
+            android:id="@+id/shiftSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dropdown"
+            android:padding="3dp"
+            android:background="@drawable/spinner_background" />
+    </LinearLayout>
+</LinearLayout>
+
