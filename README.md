@@ -1,0 +1,20 @@
+README: Features of the KJ Can Team Management App
+The KJ Can Team Management App is a robust Android application designed to optimize team management and daily operations for industrial leaders, feeders, and administrators. Built with Kotlin and integrated with Firebase Realtime Database, the app offers secure, real-time collaboration and efficient role-based task management. Whether you are an administrator managing shifts, a leader supervising operations, or a feeder tracking tasks, this app ensures seamless communication and organization.
+
+The app features a secure login system with advanced user authentication mechanisms, including salted SHA-256 password hashing. Users are redirected to role-specific homepages (Leader, Feeder, Admin) based on their credentials. The login system also ensures daily auto-expiry of sessions, enhancing security and minimizing unauthorized access. Each role is provided with tailored features and tools for their specific needs.
+
+The Admin Dashboard provides comprehensive tools for managing users and teams. Administrators can create, edit, and delete user accounts, schedule shifts, and manage team assignments with just a few taps. The app supports automated shift rotations through scheduled background workers, making it easy to maintain operational continuity. The admin's duty roster view is filtered by shifts, allowing them to update roles and assignments in real time while ensuring data consistency via Firebase.
+
+For team leaders, the app includes a dedicated dashboard that enables real-time roster management and operational oversight. Leaders can update roles dynamically, restrict unauthorized assignments (such as assigning the "Leader" role to others), and navigate quickly to essential tools like production logs, changeover checklists, and system status updates. Additionally, leaders can export operational data as Excel reports and securely share them with stakeholders.
+
+The Feeder Dashboard is designed with simplicity and efficiency in mind. Feeders can track their shifts and roles effortlessly through a streamlined interface tailored for their daily needs. The app provides them with easy access to their personal and team responsibilities, filtered specifically for Feeder operations.
+
+One of the standout features of the app is its Duty Roster Management system. Users can view and update roles dynamically using a modern, user-friendly interface. The app leverages RecyclerView with DiffUtil to sort team members by roles and usernames efficiently, ensuring smooth updates with minimal data refreshes. The system is designed to handle large amounts of data while maintaining clarity and performance.
+
+The app also includes Excel integration for production record management. Users can generate formatted daily production reports, share them securely using Android’s FileProvider, and ensure consistent formatting through embedded templates. These reports are especially useful for maintaining operational transparency and record-keeping.
+
+The app’s navigation drawer is dynamically tailored to the user's role, providing quick access to essential features such as settings, shift reports, and team management tools. This ensures that users only see relevant options, making navigation simple and intuitive. Additionally, advanced utilities like toast notifications, password visibility toggles, and flexible shared preferences enhance the user experience.
+
+With real-time Firebase integration, the app ensures that all user data, roles, and shifts are synchronized across devices. Any updates made to the system are reflected instantly for all users, enabling seamless collaboration and reducing the risk of data inconsistencies.
+
+Overall, the KJ Can Team Management App is a comprehensive solution designed to improve operational efficiency and enhance team management in modern industrial settings. By combining advanced Android features, real-time database integration, and a user-centric design, the app offers a powerful yet accessible tool for all levels of team management.
